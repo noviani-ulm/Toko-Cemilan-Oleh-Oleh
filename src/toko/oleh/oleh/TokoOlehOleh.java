@@ -69,12 +69,13 @@ public class TokoOlehOleh {
             }
              case 3:{
                  System.out.println("Pembelian melalui Online:");
-                 toko.oleh.oleh.TemplatePattern.OrderTemplate tempatorder = new toko.oleh.oleh.TemplatePattern.OrderOnline();
-                 tempatorder.processOrder(true);
+                 toko.oleh.oleh.TemplatePattern.OrderTemplate orderonline = new toko.oleh.oleh.TemplatePattern.OrderOnline();
+                 orderonline.prosesOrder(true);
                  System.out.println();
+               
                  System.out.println("\nPembelian Langsung:");
-                 toko.oleh.oleh.TemplatePattern.OrderTemplate bayarorder = new toko.oleh.oleh.TemplatePattern.OrderLangsung();
-                 bayarorder.processOrder(true);
+                 toko.oleh.oleh.TemplatePattern.OrderTemplate orderlangsung = new toko.oleh.oleh.TemplatePattern.OrderLangsung();
+                 orderlangsung.prosesOrder(true);
                    break;
              }
             case 4:{

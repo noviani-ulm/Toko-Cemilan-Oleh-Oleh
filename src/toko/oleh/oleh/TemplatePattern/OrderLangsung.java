@@ -1,14 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package toko.oleh.oleh.TemplatePattern;
 
-/**
- *
- * @author Asus
- */
-public class OrderLangsung {
+public class OrderLangsung extends OrderTemplate{
     
+    @Override
+    public void doMemilih() 
+
+    { 
+
+        System.out.println("Pembeli memilih sendiri barang yang diinginkan"); 
+        System.out.println("Jika beruntung maka dapat mencicipi"); 
+    } 
+
+  
+
+    @Override
+
+    public void doBayar() 
+
+    { 
+
+        System.out.println("Bayar langsung dikasir secara Tunai atau dengan Kartu ATM"); 
+
+    } 
+
+  
+
+    @Override
+
+    public void doAntar() 
+
+    { 
+
+        System.out.println("Barang siap dibawa oleh pembeli"); 
+
+    } 
 }

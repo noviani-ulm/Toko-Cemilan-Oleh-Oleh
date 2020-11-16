@@ -1,18 +1,18 @@
 package toko.oleh.oleh.TemplatePattern;
-import java.util.Scanner;
+
 
 public class OrderOnline extends OrderTemplate{
+    
     @Override
-
-    public void doSelect() 
+    public void doMemilih() 
 
     { 
 
-        System.out.println("Item added to online shopping cart"); 
+        System.out.println("Item ditambahkan ke keranjng belanja online"); 
 
-        System.out.println("Get gift wrap preference"); 
+        System.out.println("Dapatkan bungkus yang menarik"); 
 
-        System.out.println("Get delivery address."); 
+        System.out.println("Masukkan Alamat Tujuan"); 
 
     } 
 
@@ -20,25 +20,22 @@ public class OrderOnline extends OrderTemplate{
 
     @Override
 
-    public void doPayment() 
+    public void doBayar() 
 
     { 
 
-        System.out.println 
-
-                   ("Online Payment through Netbanking, card or Paytm"); 
+        System.out.println("Pembayaran dapat dilakukan dengan Transfer Bank atau Dompet digital"); 
 
     } 
 
   
 
     @Override
-
-    public void doDelivery() 
+    public void doAntar() 
 
     { 
 
-        System.out.println ("Ship the item through post to delivery address"); 
+        System.out.println ("Barang dikirim melalui jasa pengantaran ke alamat Anda"); 
 
     } 
 

@@ -8,6 +8,14 @@ import java.util.Scanner;
 import toko.oleh.oleh.FactoryPattern.JenisMakanan;
 import toko.oleh.oleh.FactoryPattern.Makanan;
 import toko.oleh.oleh.FactoryPattern.MakananFactory;
+import toko.oleh.oleh.bridgepattern.pembuatanamplang;
+import toko.oleh.oleh.bridgepattern.pembuatanapam;
+import toko.oleh.oleh.bridgepattern.pembuatandodol;
+import toko.oleh.oleh.bridgepattern.pembuatanikanasin;
+import toko.oleh.oleh.bridgepattern.pembuatanrabuk;
+import toko.oleh.oleh.bridgepattern.pembuatanrimpi;
+import toko.oleh.oleh.bridgepattern.pembuatanwadairangai;
+import toko.oleh.oleh.bridgepattern.pembuatanwajik;
 public class TokoOlehOleh {
    
     public static void main(String[] args) {
@@ -60,7 +68,22 @@ public class TokoOlehOleh {
 
         switch(pilih) {
             case 1:{
-                
+        pembuatanamplang a=new pembuatanamplang();
+        a.makanan();
+        pembuatanapam m=new pembuatanapam(); 
+        m.makanan();
+        pembuatandodol d= new pembuatandodol();
+        d.makanan();
+        pembuatanrabuk r=new pembuatanrabuk();
+        r.makanan();
+        pembuatanwadairangai w=new pembuatanwadairangai();
+        w.makanan();
+        pembuatanrimpi p=new pembuatanrimpi();
+        p.makanan();
+        pembuatanwajik j=new pembuatanwajik();
+        j.makanan();
+        pembuatanikanasin n=new pembuatanikanasin();
+        n.makanan();
                 break;
             }
             case 2:{

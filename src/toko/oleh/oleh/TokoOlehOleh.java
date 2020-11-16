@@ -5,6 +5,9 @@
  */
 package toko.oleh.oleh;
 import java.util.Scanner;
+import toko.oleh.oleh.FactoryPattern.JenisMakanan;
+import toko.oleh.oleh.FactoryPattern.Makanan;
+import toko.oleh.oleh.FactoryPattern.MakananFactory;
 public class TokoOlehOleh {
    
     public static void main(String[] args) {
@@ -17,7 +20,29 @@ public class TokoOlehOleh {
         System.out.println(" Di Toko Oleh-Oleh Khas Banjarmasin ");
         System.out.println(" ");
         System.out.println("Yuk Lihat Produk Kami: \n");
-        
+        Makanan satu = MakananFactory.getMakanan(JenisMakanan.Amplang_Kotabaru);
+        satu.rasa();
+    
+        Makanan dua = MakananFactory.getMakanan(JenisMakanan.Apam_Barabai);
+        dua.rasa();
+    
+        Makanan tiga = MakananFactory.getMakanan(JenisMakanan.Dodol_Kandangan);
+        tiga.rasa();
+    
+        Makanan empat = MakananFactory.getMakanan(JenisMakanan.Ikan_Rabuk);
+        empat.rasa();
+    
+        Makanan lima = MakananFactory.getMakanan(JenisMakanan.Wadai_Rangai);
+        lima.rasa();
+    
+        Makanan enam = MakananFactory.getMakanan(JenisMakanan.Wadai_Rimpi);
+        enam.rasa();
+    
+        Makanan tujuh = MakananFactory.getMakanan(JenisMakanan.Wajik);
+        tujuh .rasa();
+    
+        Makanan delapan = MakananFactory.getMakanan(JenisMakanan.Ikan_Asin);
+        delapan.rasa();
         
         
         Scanner input = new Scanner(System.in);

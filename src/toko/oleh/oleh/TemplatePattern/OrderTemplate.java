@@ -5,19 +5,19 @@ package toko.oleh.oleh.TemplatePattern;
 public abstract class OrderTemplate 
 { 
 
-    public boolean isGift; 
+    public boolean bungkus; 
 
   
 
-    public abstract void doSelect(); 
+    public abstract void doMemilih(); 
 
   
 
-    public abstract void doPayment(); 
+    public abstract void doBayar(); 
 
   
 
-    public final void giftWrap() 
+    public final void barangdibungkus() 
 
     { 
 
@@ -25,7 +25,7 @@ public abstract class OrderTemplate
 
         { 
 
-            System.out.println("Gift wrap successful"); 
+            System.out.println("Barang telah dibungkus"); 
 
         } 
 
@@ -33,7 +33,7 @@ public abstract class OrderTemplate
 
         { 
 
-            System.out.println("Gift wrap unsuccessful"); 
+            System.out.println("Barang tidak dibungkus"); 
 
         } 
 
@@ -41,25 +41,24 @@ public abstract class OrderTemplate
 
   
 
-    public abstract void doDelivery(); 
+    public abstract void doAntar(); 
 
-  
 
-    public final void processOrder(boolean isGift) 
+    public final void prosesOrder(boolean bungkus) 
 
     { 
 
-        doSelect(); 
+        doMemilih(); 
 
-        doPayment(); 
+        doBayar(); 
 
-        if (isGift) { 
+        if (bungkus) { 
 
-            giftWrap(); 
+            barangdibungkus(); 
 
         } 
 
-        doDelivery(); 
+        doAntar(); 
 
     } 
 } 

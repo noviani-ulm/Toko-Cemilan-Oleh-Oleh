@@ -8,6 +8,12 @@ import java.util.Scanner;
 import toko.oleh.oleh.FactoryPattern.JenisMakanan;
 import toko.oleh.oleh.FactoryPattern.Makanan;
 import toko.oleh.oleh.FactoryPattern.MakananFactory;
+import toko.oleh.oleh.VisitorPattern.Ikan;
+import toko.oleh.oleh.VisitorPattern.ItemElement;
+import toko.oleh.oleh.VisitorPattern.Kue;
+import toko.oleh.oleh.VisitorPattern.ShoppingCartVisitor;
+import toko.oleh.oleh.VisitorPattern.ShoppingCartVisitorImpl;
+import toko.oleh.oleh.VisitorPattern.harga;
 import toko.oleh.oleh.bridgepattern.pembuatanamplang;
 import toko.oleh.oleh.bridgepattern.pembuatanapam;
 import toko.oleh.oleh.bridgepattern.pembuatandodol;
@@ -87,7 +93,27 @@ public class TokoOlehOleh {
                 break;
             }
             case 2:{
-                
+        harga harga = new harga();
+        
+        harga.amplang = "Rp. 10.000";
+        harga.apam = "Rp. 500";
+        harga.wajik = "Rp. 1.000";
+        harga.rimpi = "Rp. 5.000";
+        harga.ikan_rabuk = "Rp. 10.000";
+        harga.ikan_asin = "Rp. 7.000";
+        harga.dodol = "Rp. 2.500";
+        harga.wadai_rangai = "Rp. 3.000";
+        
+        harga.run();       
+        
+            ItemElement[] items = new ItemElement[]{new Kue (500, 5, "Apam"),
+                                                 new Kue (5000, 2, "Rimpi"),
+                                                 new Kue (2500, 3, "Dodol"),
+                                                 new Ikan(10000, 1, "Ikan Rabuk")};
+		
+		int total = calculatePrice(items);
+		System.out.println("Total pembelian = "+total);
+   
                 break;
             }
              case 3:{
@@ -112,5 +138,14 @@ public class TokoOlehOleh {
             ulg = input.next();
         }
     }
+    
+    private static int calculatePrice(ItemElement[] items) {
+		ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
+		int sum=0;
+		for(ItemElement item : items){
+			sum = sum + item.accept(visitor);
+		}
+		return sum;
+	}
 }
     

@@ -10,17 +10,17 @@ package toko.oleh.oleh.VisitorPattern;
  * @author ASUS
  */
 public class harga {
-    String amplang;
-    String apam;
-    String wajik;
-    String rimpi;
-    String ikan_rabuk;
-    String ikan_asin;
-    String dodol;
-    String wadai_rangai;
+    public String amplang;
+    public String apam;
+    public String wajik;
+    public String rimpi;
+    public String ikan_rabuk;
+    public String ikan_asin;
+    public String dodol;
+    public String wadai_rangai;
     
-    void run(){
-        System.out.println("Daftar harga oleh-oleh");
+    public void run(){
+        System.out.println("Daftar harga produk");
         System.out.println();
         System.out.println("Amplang = " + amplang);
         System.out.println("Apam = " + apam);
@@ -32,7 +32,7 @@ public class harga {
         System.out.println("Wadai Rangai = " + wadai_rangai);
         System.out.println();
         System.out.println("============================================");
-        System.out.println("Oleh-oleh yang dibeli");
+        System.out.println("Produk yang dibeli");
         System.out.println();
     }
 }

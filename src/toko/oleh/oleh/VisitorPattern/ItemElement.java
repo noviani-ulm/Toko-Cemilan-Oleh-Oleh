@@ -9,7 +9,7 @@ package toko.oleh.oleh.VisitorPattern;
  *
  * @author ASUS
  */
-interface ItemElement {
+public interface ItemElement {
     
     public int accept(ShoppingCartVisitor Visitor);
 }
